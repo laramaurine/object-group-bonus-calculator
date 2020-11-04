@@ -31,6 +31,52 @@ const employees = [
   }
 ];
 
+let employeeBonus = [ 
+  {
+    name: '',
+    bonusPercentage: '',
+    totalCompensation: '',
+    totalBonus: ''  
+  }
+];
+
+bonusCaclulator (employees);
+
+function bonusCaclulator( employeeArray ){
+
+    for ( let i = 0; i<employeeArray.length; i++){
+        //rating <2 no bonus
+
+        let bonusPercentage = 0;
+        if( employeeArray[i].reviewRating <= 2){
+          bonusPercentage[i] = 0;
+        }
+        else if( employeeArray[i].reviewRating === 3){
+          bonusPercentage[i] = 0.04;
+          console.log('we are in 3 rating');
+          
+        }
+        else if( employeeArray[i].reviewRating === 4){
+          bonusPercentage[i] = 0.06;
+        }
+        else if( employeeArray[i].reviewRating === 5){
+          bonusPercentage[i] = 0.1;
+        }
+        //arraynamepushinginto.push("info to be pushed")
+        employeeBonus.push(employeeArray[i].name);
+        employeeBonus.push(employeeArray[i].bonusPercentage);
+        console.log('testing', employeeBonus);
+        //objectName.keyvalueforpercent = bonuspercent
+        //atticuus..03 = 3%
+        //employeeBonus
+          
+          //employeeBonus[i].bonusPercentage = bonusPercentage;
+    }
+
+};
+
+
+
 // YOU SHOULD NOT NEED TO CHANGE ANYTHING ABOVE THIS POINT
 
 // Take small steps! Don't write a for loop and two functions that do all of the calculations right away.
