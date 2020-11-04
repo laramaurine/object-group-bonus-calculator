@@ -31,51 +31,72 @@ const employees = [
   }
 ];
 
-let employeeBonus = [ 
+/*let employeeBonus = [ 
   {
     name: '',
     bonusPercentage: '',
     totalCompensation: '',
     totalBonus: ''  
   }
-];
+];*/
 
-bonusCaclulator (employees);
+console.log('blah', bonusCaclulator (employees));
 
 function bonusCaclulator( employeeArray ){
-
+  let employeeBonusObject = [
+    {
+      name: '',
+      bonusPercentage: '',
+      totalCompensation: '',
+      totalBonus: ''
+    }
+  ]
     for ( let i = 0; i<employeeArray.length; i++){
         //rating <2 no bonus
-
+        //create the object here
         let bonusPercentage = 0;
         if( employeeArray[i].reviewRating <= 2){
-          bonusPercentage[i] = 0;
+          bonusPercentage = 0;
+          //may need to change 0 to empty string in case it turns total comp to 0
         }
         else if( employeeArray[i].reviewRating === 3){
-          bonusPercentage[i] = 0.04;
-          console.log('we are in 3 rating');
-          
+          bonusPercentage = 0.04;
+          console.log('we are in 3 rating'); 
         }
         else if( employeeArray[i].reviewRating === 4){
-          bonusPercentage[i] = 0.06;
+          bonusPercentage = 0.06;
         }
         else if( employeeArray[i].reviewRating === 5){
-          bonusPercentage[i] = 0.1;
+          bonusPercentage = 0.1;
         }
         //arraynamepushinginto.push("info to be pushed")
-        employeeBonus.push(employeeArray[i].name);
+        /*employeeBonus.push(employeeArray[i].name);
         employeeBonus.push(employeeArray[i].bonusPercentage);
         console.log('testing', employeeBonus);
         //objectName.keyvalueforpercent = bonuspercent
         //atticuus..03 = 3%
         //employeeBonus
-          
+          */
+        //return newEmployeeObject with all the needed info
+        
+        employeeBonusObject.name = employeeArray[i].name;
+        employeeBonusObject.bonusPercentage = bonusPercentage;
+        //employeeBonusObject.totalCompensation = (bonusPercentage * employeeArray[i].annualSalary) + employeeArray[i].annualSalary; 
+        //employeeBonusObject.totalBonus = bonusPercentage * employeeArray[i].annualSalary;
+
+        
+return employeeBonusObject;
+
+
+        }
+
+
           //employeeBonus[i].bonusPercentage = bonusPercentage;
-    }
+    //}
 
 };
 
-
+//console.log(bonusCalculator(employees));
 
 // YOU SHOULD NOT NEED TO CHANGE ANYTHING ABOVE THIS POINT
 
@@ -87,3 +108,4 @@ function bonusCaclulator( employeeArray ){
 // Ask questions when you don't.
 
 console.log( employees );
+
