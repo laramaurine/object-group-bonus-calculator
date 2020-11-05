@@ -109,3 +109,54 @@ return employeeBonusObject;
 
 console.log( employees );
 
+
+/* 
+LIVE SOLVE IN HERE
+loop over employees and log them below
+see code running as quickly as possible source in etc
+loop over employee array and log it in a function'=
+
+
+  for(let item of employees){
+    processEmployee( employeeItem )
+  }
+function processEmployee( employee ){
+  console.log('employee is', employee)
+  let newEmployeeObject = {
+    name: employee.name,
+    totalCompensation: 0,
+    bonusPercentage: calculateBonusPercentage( employee )0,
+    totalBonus: 0
+  }
+  return newEmployeeObject
+}
+
+function calculateBonusPercentage( employee ){
+  let bonusPercentage = 10;
+  return bonusPercentage;
+}
+
+each employee is logged so this works so far
+
+step #2
+
+switch - works for multiple conditions
+switch(employee.reviewRating){
+  case 0:
+  case 1:
+  case 2:
+    bonusPercentage = 0; --TODO - can remove this???????/
+    break;
+  case 3:
+    bonusPercentage = 4;
+    break;
+  case 4:
+    bonusPercentage = 6;
+    break;
+  case 5:
+    bonusPercentage = 10;
+    break;  
+}
+
+*/
+
